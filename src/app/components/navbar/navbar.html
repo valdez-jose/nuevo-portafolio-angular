@@ -1,22 +1,30 @@
 
 <header class="navbar">
 
-  <div class="logo">
-    <img src="assets/logo-izquierda.png" alt="Logo izquierdo">
+  <div class="logo logo-left">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNCb_gUMuJLcVPnmS_AtaeUF7ubCxwQhK-iw&s"
+      alt="Logo izquierdo"
+    >
   </div>
 
-  <nav class="nav-links">
+  <button class="menu-toggle" (click)="toggleMenu()">
+    {{ isMenuOpen ? '✕' : '☰' }}
+  </button>
 
+  <nav class="nav-links" [class.active]="isMenuOpen">
     <a href="https://bicicleteria-angular.vercel.app/" target="_blank">Proyecto 1</a>
     <a href="https://todo-motos-angular.vercel.app/" target="_blank">Proyecto 2</a>
     <a href="https://valdez-jose.github.io/galeria-sanluis/" target="_blank">Proyecto 3</a>
     <a href="https://valdez-jose.github.io/mi-primerproyecto-react/" target="_blank">Quien soy</a>
     <a href="https://valdez-jose.github.io/vivero-el-paso/" target="_blank">Proyecto 5</a>
+  </nav>
 
-  </nav>   
-
-  <div class="logo">
-    <img src="assets/logo-derecha.png" alt="Logo derecho">  
+  <div class="logo logo-right">
+    <img
+      src="https://w7.pngwing.com/pngs/965/375/png-transparent-estudiantes-de-la-plata-club-de-gimnasia-y-esgrima-la-plata-football-avellaneda-football-leaf-sport-sports-thumbnail.png"
+      alt="Logo derecho"
+    >
   </div>
 
 </header>

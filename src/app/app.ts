@@ -1,14 +1,16 @@
-import { Component, signal } from '@angular/core';
-import {Navbar} from './components/navbar/navbar';
-import {Home} from './components/home/home';
-import {Footer} from './components/footer/footer';
+
+import { Component } from '@angular/core';
+// 👇 AGREGÁ ESTA LÍNEA (revisá que la ruta coincida con tus carpetas)
+import { Navbar } from './components/navbar/navbar'; 
+import { Home } from './components/home/home';       // Supongo que tenés estos también
+import { Footer } from './components/footer/footer'; // Supongo que tenés estos también
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Home, Footer],
+  standalone: true, // Si estás usando componentes Standalone (Angular moderno)
+  imports: [Navbar, Home, Footer], // <--- Acá es donde te tiraba el error
   templateUrl: './app.html',
-  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('nuevo-portafolio-angular');
+  // ...
 }
