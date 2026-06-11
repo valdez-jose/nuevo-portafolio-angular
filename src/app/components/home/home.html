@@ -1,13 +1,21 @@
-<section class="hero">
 
+<section
+  class="hero"
+  [style.background-image]="'url(' + imagenActual + ')'"
+>
   <div class="overlay">
 
-    <h1>Mi Portafolio Angular</h1>
+    <button class="btn prev" (click)="anterior()">
+      &#10094;
+    </button>
 
-    <p>
-      Proyectos desarrollados con Angular
-    </p>
+    <div class="contenido">
+      <h1>Mi Portafolio</h1>
+    </div>
+
+    <button class="btn next" (click)="siguiente()">
+      &#10095;
+    </button>
 
   </div>
-
 </section>
